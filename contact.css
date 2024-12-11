@@ -1,0 +1,539 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.logo-img {
+    width: 100px;  /* Smanjuje širinu logotipa */
+    height: 50px; /* Smanjuje visinu logotipa */
+    margin-right: 8px; /* Razmak između logotipa i teksta */
+}
+
+body, html {
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+header {
+    display: flex;
+    font-family: serif ;
+    font-size:px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: rgba(233, 215, 173, 0.5);
+    color: #120101;
+}
+
+header nav a {
+    margin: 0 1rem;
+    color: #210303;
+    text-decoration: none;
+}
+
+header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Carousel styling */
+.carousel {
+    position: relative;
+    overflow: hidden;
+    height: 60vh; /* Postavite visinu karusela na 60% visine prozora */
+}
+
+.carousel-images img {
+    width: 100%;
+    height: auto; /* Zadržava proporcije slike */
+    max-height: 60vh; /* Ograničava maksimalnu visinu slike */
+    object-fit: contain;
+    object-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 1s ease;
+}
+
+.carousel-images img:not(:first-child) {
+    opacity: 0;
+}
+
+
+/* Footer styling */
+footer {
+    background-color: #ecddbf;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+footer .social-media a {
+    margin: 0 1rem;
+    color: #120707;
+    text-decoration: none;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    header nav {
+        display: flex;
+        flex-direction: column;
+    }
+}
+/* Galerija */
+.gallery {
+    padding: 2rem;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.gallery h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+/* Recenzije */
+.reviews {
+    padding: 2rem;
+    background-color: #fff3e0;
+    text-align: center;
+}
+
+.reviews h2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.review-card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 1rem auto;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.review-card p {
+    font-style: italic;
+    color: #333;
+}
+
+.review-card h4 {
+    margin-top: 0.5rem;
+    color: #666;
+}
+/* Mapa */
+.map {
+    padding: 2rem;
+    background-color: #f1f1f1;
+    text-align: center;
+}
+
+.map h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.map-container {
+    max-width: 800px;
+    margin: auto;
+}
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+header nav a:hover {
+    color: #f1c40f; /* Boja pri hover-u */
+    text-decoration: underline;
+}
+/* Stilizacija za karusel */
+.carousel {
+    position: relative;
+    overflow: hidden;
+    height: 60vh; /* Podesi prema potrebi */
+}
+
+.carousel-images img {
+    width: 100%;
+    height: auto; 
+    max-height: 60vh;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.carousel-images img:first-child {
+    opacity: 1; /* Prva slika je vidljiva inicijalno */
+}
+
+/* Fade-in efekat za elemente */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* Dugme za pristupačnost */
+.accessibility-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+/* Modal sa opcijama */
+.modal {
+    display: none; /* Početno je skriven */
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 999;
+    width: 250px;
+    max-width: 100%;
+}
+
+.modal-content {
+    text-align: center;
+}
+
+.close-btn {
+    font-size: 28px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+/* Stilizacija dugmadi unutar modala */
+.options button {
+    margin: 10px;
+    padding: 10px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.options button:hover {
+    background-color: #45a049;
+}
+
+/* Stil za visok kontrast */
+.high-contrast {
+    background-color: black;
+    color: white;
+}
+
+.high-contrast a {
+    color: yellow;
+}
+
+.high-contrast button {
+    background-color: darkgray;
+    color: white;
+}
+/* Dugme za pristupačnost */
+.accessibility-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+/* Modal sa opcijama */
+.modal {
+    display: none; /* Početno je skriven */
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 999;
+    width: 250px;
+    max-width: 100%;
+}
+
+.modal-content {
+    text-align: center;
+}
+
+.close-btn {
+    font-size: 28px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+/* Stilizacija dugmadi unutar modala */
+.options button {
+    margin: 10px;
+    padding: 10px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.options button:hover {
+    background-color: #45a049;
+}
+
+/* Stil za visok kontrast */
+.high-contrast {
+    background-color: black;
+    color: rgb(240, 228, 8);
+}
+
+.high-contrast a {
+    color: yellow;
+}
+
+.high-contrast button {
+    background-color: rgb(213, 245, 6);
+    color: rgb(7, 1, 1);
+}
+
+/* Povećanje razmaka između redova */
+.increased-line-spacing {
+    line-height: 1.8; /* Povećava razmak između redova */
+}
+
+/* Sakrivanje slika */
+.hidden-images img {
+    display: none;
+}
+
+/* Promena boje pozadine */
+.light-background {
+    background-color: #fff;
+    color: #000;
+}
+
+.dark-background {
+    background-color: #121212;
+    color: #fff;
+}
+/* Kontrast crno-žuto */
+.black-yellow {
+    background-color: black;
+    color: yellow;
+}
+
+.black-yellow a {
+    color: yellow;
+}
+
+.black-yellow button {
+    background-color: darkgray;
+    color: yellow;
+}
+
+/* Kontrast plavo-žuto */
+.blue-yellow {
+    background-color: #003366; /* Tamno plava */
+    color: yellow;
+}
+
+.blue-yellow a {
+    color: yellow;
+}
+
+.blue-yellow button {
+    background-color: #004C99; /* Srednja plava */
+    color: yellow;
+}
+
+/* Kontrast crno-belo */
+.black-white {
+    background-color: black;
+    color: white;
+}
+
+.black-white a {
+    color: white;
+}
+
+.black-white button {
+    background-color: gray;
+    color: white;
+}
+/* About sekcija */
+.about {
+    padding: 3rem 2rem; /* Prostrano unutar sekcije */
+    background-color: #f1f1f1; /* Svetlo siva pozadina */
+    color: #333; /* Tamno sivi tekst */
+    text-align: center; /* Centriranje sadržaja */
+}
+
+.about h2 {
+    font-size: 2.5rem; /* Veći naslov */
+    margin-bottom: 1rem; /* Razmak između naslova i opisa */
+    font-family: 'Georgia', serif; /* Luksuzniji font za naslov */
+}
+
+.about p {
+    font-size: 1.2rem; /* Umeren font za paragraf */
+    line-height: 1.6; /* Povećan razmak između redova */
+    margin-bottom: 1.5rem; /* Razmak ispod paragrafa */
+}
+
+.about .about-img {
+    width: 100%;
+    height: auto; /* Slika se prilagođava širini */
+    border-radius: 10px; /* Zaobljeni ivici slike */
+    margin-top: 2rem; /* Razmak između teksta i slike */
+}
+
+.about .about-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap; /* Omogućava da se sadržaj prikazuje u više redova na manjim ekranima */
+    margin-top: 2rem;
+}
+
+.about .about-text {
+    flex: 1;
+    max-width: 600px; /* Maksimalna širina za tekst */
+    padding: 1rem;
+}
+
+.about .about-video {
+    flex: 1;
+    max-width: 600px;
+    padding: 1rem;
+    text-align: center;
+}
+
+.about .about-video iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px; /* Zaobljeni ivici za video */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Blaga senka oko videa */
+}
+
+/* Efekat za fade-in animaciju */
+.fade-in-about {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in-about.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Kontakt sekcija */
+#contact {
+    padding: 40px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    margin-top: 50px;
+  }
+  
+  #contact h2 {
+    text-align: center;
+    color: #333;
+    font-size: 2rem;
+  }
+  
+  #contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #contact label {
+    font-size: 1rem;
+    color: #555;
+    margin-top: 10px;
+  }
+  
+  #contact input, #contact textarea {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  #contact button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+  }
+  
+  #contact button:hover {
+    background-color: #0056b3;
+  }
+  #contact button {
+    transition: background-color 0.3s ease;
+  }
+  @media (max-width: 768px) {
+    #contact {
+      padding: 20px;
+    }
+  
+    #contact input, #contact textarea, #contact button {
+      width: 100%;
+      max-width: none;
+    }
+  }
+  

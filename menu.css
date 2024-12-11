@@ -1,0 +1,434 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+header {
+    display: flex;
+    font-family: serif;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: rgba(233, 215, 173, 0.5);
+    color: #120101;
+}
+
+header nav a {
+    margin: 0 1rem;
+    color: #210303;
+    text-decoration: none;
+}
+
+header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+body {
+    background-image: url('images/restoran_zlatibor.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #f5e0aa;
+    color: rgb(24, 4, 4);
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 1.8rem;
+}
+
+header nav a {
+    color: rgb(14, 4, 4);
+    text-decoration: none;
+    margin: 0 1rem;
+    font-size: 1rem;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+.menu {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.menu h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #a91717;
+    padding-bottom: 0.5rem;
+}
+
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid #eb1111;
+}
+
+.menu-item:last-child {
+    border-bottom: none;
+}
+
+.item-info h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #444;
+}
+
+.item-info p {
+    margin: 0.2rem 0 0;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.item-price {
+    font-size: 1.1rem;
+    color: #444;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #baa578;
+    color: #fff;
+}
+
+footer .social-media a {
+    color: white;
+    margin: 0 1rem;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+footer .social-media a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    header nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .menu-item {
+        flex-direction: column;
+    }
+}
+.logo-img {
+    width: 100px;  /* Smanjuje širinu logotipa */
+    height: 50px; /* Smanjuje visinu logotipa */
+    margin-right: 8px; /* Razmak između logotipa i teksta */
+}
+/* Dugme za pristupačnost */
+.accessibility-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+/* Modal sa opcijama */
+.modal {
+    display: none; /* Početno je skriven */
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 999;
+    width: 250px;
+    max-width: 100%;
+}
+
+.modal-content {
+    text-align: center;
+}
+
+.close-btn {
+    font-size: 28px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+/* Stilizacija dugmadi unutar modala */
+.options button {
+    margin: 10px;
+    padding: 10px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.options button:hover {
+    background-color: #45a049;
+}
+
+/* Stil za visok kontrast */
+.high-contrast {
+    background-color: black;
+    color: white;
+}
+
+.high-contrast a {
+    color: yellow;
+}
+
+.high-contrast button {
+    background-color: darkgray;
+    color: white;
+}
+/* Dugme za pristupačnost */
+.accessibility-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+/* Modal sa opcijama */
+.modal {
+    display: none; /* Početno je skriven */
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 999;
+    width: 250px;
+    max-width: 100%;
+}
+
+.modal-content {
+    text-align: center;
+}
+
+.close-btn {
+    font-size: 28px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+/* Stilizacija dugmadi unutar modala */
+.options button {
+    margin: 10px;
+    padding: 10px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.options button:hover {
+    background-color: #45a049;
+}
+
+/* Stil za visok kontrast */
+.high-contrast {
+    background-color: black;
+    color: rgb(240, 228, 8);
+}
+
+.high-contrast a {
+    color: yellow;
+}
+
+.high-contrast button {
+    background-color: rgb(213, 245, 6);
+    color: rgb(7, 1, 1);
+}
+
+/* Povećanje razmaka između redova */
+.increased-line-spacing {
+    line-height: 1.8; /* Povećava razmak između redova */
+}
+
+/* Sakrivanje slika */
+.hidden-images img {
+    display: none;
+}
+
+/* Promena boje pozadine */
+.light-background {
+    background-color: #fff;
+    color: #000;
+}
+
+.dark-background {
+    background-color: #121212;
+    color: #fff;
+}
+/* Kontrast crno-žuto */
+.black-yellow {
+    background-color: black;
+    color: yellow;
+}
+
+.black-yellow a {
+    color: yellow;
+}
+
+.black-yellow button {
+    background-color: darkgray;
+    color: yellow;
+}
+
+/* Kontrast plavo-žuto */
+.blue-yellow {
+    background-color: #003366; /* Tamno plava */
+    color: yellow;
+}
+
+.blue-yellow a {
+    color: yellow;
+}
+
+.blue-yellow button {
+    background-color: #004C99; /* Srednja plava */
+    color: yellow;
+}
+
+/* Kontrast crno-belo */
+.black-white {
+    background-color: black;
+    color: white;
+}
+
+.black-white a {
+    color: white;
+}
+
+.black-white button {
+    background-color: gray;
+    color: white;
+}
+/* About sekcija */
+.about {
+    padding: 3rem 2rem; /* Prostrano unutar sekcije */
+    background-color: #f1f1f1; /* Svetlo siva pozadina */
+    color: #333; /* Tamno sivi tekst */
+    text-align: center; /* Centriranje sadržaja */
+}
+
+.about h2 {
+    font-size: 2.5rem; /* Veći naslov */
+    margin-bottom: 1rem; /* Razmak između naslova i opisa */
+    font-family: 'Georgia', serif; /* Luksuzniji font za naslov */
+}
+
+.about p {
+    font-size: 1.2rem; /* Umeren font za paragraf */
+    line-height: 1.6; /* Povećan razmak između redova */
+    margin-bottom: 1.5rem; /* Razmak ispod paragrafa */
+}
+
+.about .about-img {
+    width: 100%;
+    height: auto; /* Slika se prilagođava širini */
+    border-radius: 10px; /* Zaobljeni ivici slike */
+    margin-top: 2rem; /* Razmak između teksta i slike */
+}
+
+.about .about-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap; /* Omogućava da se sadržaj prikazuje u više redova na manjim ekranima */
+    margin-top: 2rem;
+}
+
+.about .about-text {
+    flex: 1;
+    max-width: 600px; /* Maksimalna širina za tekst */
+    padding: 1rem;
+}
+
+.about .about-video {
+    flex: 1;
+    max-width: 600px;
+    padding: 1rem;
+    text-align: center;
+}
+
+.about .about-video iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px; /* Zaobljeni ivici za video */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Blaga senka oko videa */
+}
+
+/* Efekat za fade-in animaciju */
+.fade-in-about {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in-about.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+#accessibilityButton {
+    width: 40px; /* Širina slike */
+    height: 40px; /* Visina slike */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  
+  #accessibilityButton {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+  }
+  
+  #accessibilityButton img {
+    width: 40px; /* Prilagodite veličinu slike po želji */
+    height: 40px; /* Prilagodite visinu slike po želji */
+  }
+  
+  

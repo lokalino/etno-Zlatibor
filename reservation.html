@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservation</title>
+    <link rel="stylesheet" href="reservation.css">
+</head>
+<body>
+    <header>
+        <h1 class="logo">
+            <img src="images              /restoran_zlatibor.jpg" alt="Logo" class="logo-img"> Etno Zlatibor
+        </h1>
+        <nav>
+            <a href="index.html">Početna</a>
+            <a href="about.html">O nama</a>
+            <a href="menu.html">Meni</a>
+            <a href="reservation.html">Reservacije</a>
+            <a href="contact.html">Kontakt</a>
+        </nav>
+    </header>
+   
+    <section class="reservation">
+        <h2>Rezervacija</h2>
+        <form action="#" method="post" class="reservation-form">
+            <input type="text" name="name" placeholder="Vaše ime" required>
+            <input type="date" name="Datum" required>
+            <input type="time" name="Vreme" required>
+            <input type="number" name="guests" placeholder="Broj gostiju" required>
+            <button type="submit">Rezerviši</button>
+        </form>
+    </section>
+    <div id="accessibilityButton" class="accessibility-button">
+        <img src="./images              /logo.png" alt="Zupčanik" />
+      </div>
+      
+
+<!-- Modal sa opcijama -->
+<div id="accessibilityModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" id="closeModal">&times;</span>
+        <h3>Pristupačnost</h3>
+        <div class="options">
+            <button id="zoomIn">Povećaj tekst</button>
+            <button id="zoomOut">Smanji tekst</button>
+            <button id="highContrast">Visok kontrast</button>
+            <button id="toggleImages">Sakrij slike</button>
+            <button id="increaseSpacing">Povećaj razmak između redova</button>
+            <button id="changeBackground">Promeni pozadinu</button>
+            
+            <button id="reset">Resetuj postavke</button>
+        </div>
+    </div>
+</div>
+
+</div>
+
+
+
+</div>
+
+    <footer>
+        <div class="social-media">
+            <a href="https://facebook.com" target="_blank">Facebook</a>
+            <a href="https://instagram.com" target="_blank">Instagram</a>
+            <a href="https://twitter.com" target="_blank">Twitter</a>
+        </div>
+    </footer>
+</body>
+</html>
